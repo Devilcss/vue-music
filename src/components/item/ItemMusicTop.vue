@@ -1,6 +1,6 @@
 <template>
   <div class="itemMusicTop">
-    <img :src="playlist.coverImgUrl" alt="" class="bgimg" />
+    <img v-lazy="playlist.coverImgUrl" alt="" class="bgimg" />
     <div class="itemLeft">
       <svg class="icon" aria-hidden="true" @click="$router.go(-1)">
         <use xlink:href="#icon-zuojiantou"></use>
@@ -18,7 +18,7 @@
   </div>
   <div class="itemTopContent">
     <div class="contentLeft">
-      <img :src="playlist.coverImgUrl" alt="" />
+      <img v-lazy="playlist.coverImgUrl" alt="" />
       <div class="palyCount">
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-gl-play-copy"></use>
@@ -29,7 +29,7 @@
     <div class="contentRight">
       <p class="rightP_one">{{ playlist.name }}</p>
       <div class="right_img">
-        <img :src="playlist.creator.backgroundUrl" alt="" />
+        <img v-lazy="playlist.creator.backgroundUrl" alt="" />
         <span>{{ playlist.creator.nickname }}</span>
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-youjiantou"></use>
